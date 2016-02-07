@@ -26,7 +26,7 @@ $result=_select_data($sql);
 $m=mysql_fetch_array($result);
 $q = $m['fenshu'];
 
-if($q!=0 || $q!=100)
+if($q!=0 && $q!=100)
 {
     $sql = "UPDATE `score` SET `fenshu`= '$n' where id = '$user'";
     _update_data($sql);
